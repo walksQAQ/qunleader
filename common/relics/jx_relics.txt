@@ -1,0 +1,57 @@
+
+r_jxtd = {
+	activation_duration = 500
+	portrait = "GFX_jxtd"
+	sound = "relic_activation_the_rubricator"
+
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			
+		}
+		produces = {
+			
+		}
+	}
+
+	ai_weight = {
+		weight = 150
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_produces_mult = 0.15
+	}
+
+	score = 10086
+
+	active_effect = {
+		custom_tooltip = r_jxtd_active
+		custom_tooltip = relic_500
+		hidden_effect = {
+			add_modifier = {
+				modifier = relic_activation_cooldown
+				days = 500
+			}
+			add_modifier = {
+				modifier = jxtd_modidier days = 500
+			}
+			country_event = {
+				id = s_leader.55
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+

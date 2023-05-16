@@ -1,0 +1,40 @@
+# 原版的，展示一段描述，不用改
+inline_script = {
+    script = trait/subtitle/council_$COUNCIL$
+    RARITY = $RARITY$
+    CLASS = $CLASS$
+}
+icon = {
+    # 背景，需要在interface里注册
+    layer = {
+        icon = "gfx/interface/icons/traits/leader_traits/透明.dds"
+    }
+
+    # 稀有度图标，不用改
+    inline_script = trait/icon_element/rarity_$RARITY$
+
+    # 除去背景外的图标，需要在interface里注册
+    layer = {
+        icon = "gfx/interface/icons/traits/leader_traits/橙子t.dds"
+    }
+
+    # 议会图标，不用改
+    inline_script = {
+        script = trait/icon_element/council_$COUNCIL$
+        CLASS = $CLASS$
+    }
+
+    # 等级角标，不用改
+    layer = {
+        icon = GFX_trait_tier_$TIER$
+        visible = {
+            has_paragon_dlc = yes
+        }
+    }
+}
+
+# 稀有度
+leader_trait_rarity = $RARITY$
+
+# 自动排序
+sorting_priority = @trait_sorting_priority_$RARITY$_$COUNCIL$_$TIER$

@@ -1,0 +1,24 @@
+﻿l_simp_chinese:
+
+##法令##
+ edict_QL_caidan:0"领袖菜单"
+ edict_QL_caidan_desc:0"打开本模组菜单"
+##主菜单##
+ leader_list.1.title:0"群领袖"
+ leader_list.1.desc:0"这里是群领袖mod相关功能的主要列表"
+ leader_list.1.a:0"领袖召唤系统"
+ leader_list.1.b:0"领袖特殊功能系统"
+ leader_list_portrait_reset:0"重置特殊领袖立绘"
+
+##领袖召唤模块##
+ leader_list.2.title:0"领袖召唤系统"
+ leader_list.2.desc:0"这里可以召唤本mod中已完成的领袖"
+ leader_list.2.a:0"召唤大橙子"
+
+##特殊功能模块##
+ leader_list.3.title:0"领袖特殊功能系统"
+ leader_list.3.desc:0"在这里可以启用特殊领袖自带的特殊功能"
+ leader_list.3.a:0"食用橙子"
+ leader_list.3.b:0"橙子的偶像之旅"
+ leader_chengzi.4.a:0"暂停橙子的偶像工作"
+ leader_chengzi.4.b:0"让橙子成为偶像吧！"

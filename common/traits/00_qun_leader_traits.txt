@@ -1,0 +1,428 @@
+####橙子####
+leader_trait_chengzi = {
+	cost = 1
+
+	inline_script = {
+		CLASS = chengzi
+		script = trait/icon_chengzi
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 3
+	}
+
+	randomized = no
+
+	self_modifier = {
+		species_leader_exp_gain = 10
+		leaders_upkeep_mult = -1
+		leader_governors_food_produces_add = 200
+	}
+	planet_modifier = {
+		pop_environment_tolerance = 100
+	}
+
+	leader_class = all
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_chengzi_adol = {
+	cost = 1
+
+	inline_script = {
+		CLASS = chengzi
+		script = trait/icon_chengzi
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 3
+	}
+
+	randomized = no
+
+	self_modifier = {
+		species_leader_exp_gain = 10
+		leaders_upkeep_mult = -1
+		leader_governors_food_produces_add = 200
+	}
+	planet_modifier = {
+		pop_environment_tolerance = 100
+		planet_immigration_pull_add = 100
+		planet_immigration_pull_mult = 5
+		planet_emigration_push_add = -99999
+		planet_emigration_push_mult = -100
+	}
+	system_modifier = {
+		country_unity_produces_mult = 5
+		planet_jobs_alloys_produces_mult = 10
+		planet_jobs_unity_produces_mult = 5
+	}
+
+	leader_class = all
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_chengzi_ate = {
+	cost = 1
+
+	inline_script = {
+		CLASS = chengzi
+		script = trait/icon_chengzi
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 3
+	}
+
+	randomized = no
+
+	self_modifier = {
+		species_leader_exp_gain = -10
+		leaders_upkeep_mult = -1
+		leader_governors_food_produces_add = -20
+	}
+	planet_modifier = {
+		pop_environment_tolerance = 50
+	}
+
+	leader_class = all
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_chengzi_council = {
+	cost = 1
+	councilor_trait = yes
+
+	inline_script = {
+		CLASS = chengzi
+		script = trait/icon_chengzi
+		RARITY = common
+		COUNCIL = yes
+		TIER = 3
+	}
+
+	randomized = no
+
+	leader_class = all
+
+	triggered_self_modifier = {
+		leader_governors_alloys_produces_add = 500
+		leader_governors_energy_produces_add = 500
+	}
+	triggered_modifier = {
+		ship_weapon_range_mult = 5
+		ship_weapon_damage = 0.5
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_jiaohua = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/狡猾t.dds"
+	randomized = no
+                immortal_leaders = yes
+	modifier = {    
+		country_engineering_research_produces_add = 1000
+		all_technology_research_speed = 1
+	}	
+	self_modifier = {
+		species_leader_exp_gain = 10
+                                leaders_upkeep_mult = -1
+	}
+	
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_food = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/橙子t2.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		country_food_produces_add = 1018
+	}	
+	self_modifier = {
+		species_leader_exp_gain = -1
+                                leaders_upkeep_mult = 1.5
+	}
+	
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_tianji = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/天机.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		country_engineering_research_produces_add = 3000
+		all_technology_research_speed = -10
+	}	
+	
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_keyan = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/天机.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		all_technology_research_speed = 10
+	}	
+	
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_fish = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/摸鱼.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		all_technology_research_speed = -100
+	}	
+	self_modifier = {
+		species_leader_exp_gain = -100
+	}
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_wulixue = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/物理学.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		category_computing_research_speed_mult = 1
+		category_particles_research_speed_mult = 1
+		category_field_manipulation_research_speed_mult = 1
+	}	
+	self_modifier = {
+		species_leader_exp_gain = 1
+		leaders_upkeep_mult = -1
+	}
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_shehuixue = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/社会学.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		category_biology_research_speed_mult = 2
+		category_military_theory_research_speed_mult = 2
+		category_new_worlds_research_speed_mult = 2
+	}	
+	self_modifier = {
+		species_leader_exp_gain = 1
+	}
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_gongchengxue = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/工程学.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		category_voidcraft_research_speed_mult = 1.5
+		category_industry_research_speed_mult = 1.5
+		category_materials_research_speed_mult = 1.5
+	}	
+	self_modifier = {
+		species_leader_exp_gain = 1
+	}
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_kaoguadd = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/考古强化.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		ship_archaeological_site_excavation_speed_mult = 15
+	}	
+	self_modifier = {
+		species_leader_exp_gain = 1
+	}
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_tansuoadd = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/探索强化.dds"
+	randomized = no
+                immortal_leaders = no
+	modifier = {    
+		science_ship_survey_speed = 5
+		ship_anomaly_generation_chance_mult = 0.5
+		ship_anomaly_research_speed_mult = 5
+	}	
+	self_modifier = {
+		species_leader_exp_gain = 1
+	}
+	
+
+	leader_class = { admiral scientist general governor }
+	leader_trait = all
+	
+	ai_categories = {
+		engineering
+		physics
+		society
+		survey
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+

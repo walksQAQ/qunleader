@@ -1,0 +1,185 @@
+namespace = leader_qianghua
+
+#country_event = {
+#	id = leader_qianghua.1
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = leader_lgyxdjxtd
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = leader_lgyxdjxtd }
+#			add_trait = leader_trait_wulixue
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.2
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_chengzi
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = f_chengzi }
+#			add_trait = leader_trait_shehuixue
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.3
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_walk
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = f_walk }
+#			add_trait = leader_trait_gongchengxue
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.11
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = leader_lgyxdjxtd
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = leader_lgyxdjxtd }
+#			add_trait = leader_trait_kaoguadd
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.111
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = leader_lgyxdjxtd
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = leader_lgyxdjxtd }
+#			add_trait = leader_trait_tansuoadd
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.22
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_chengzi
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = f_chengzi }
+#			add_trait = leader_trait_kaoguadd
+#	}
+#  }
+#}
+#country_event = {
+#	id = leader_qianghua.222
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_chengzi
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = f_chengzi }
+#			add_trait = leader_trait_tansuoadd
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.33
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_walk
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = f_walk }
+#			add_trait = leader_trait_kaoguadd
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.333
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_walk
+#		}
+#	}
+#    immediate = {
+#		every_owned_leader = {
+#			limit = { has_leader_flag = f_walk }
+#			add_trait = leader_trait_tansuoadd
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = leader_qianghua.4
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		has_government = gov_xilin_empire
+#	}
+#
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				OR = {
+#					has_leader_flag = f_walk
+#					has_leader_flag = f_chengzi
+#					has_leader_flag = leader_lgyxdjxtd
+#				}
+#			}
+#			add_trait = leader_trait_scientist_h_apostle
+#		}
+#	}
+#}

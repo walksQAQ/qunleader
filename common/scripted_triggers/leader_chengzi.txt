@@ -1,0 +1,5 @@
+is_chengzi = {
+    OR = {
+        has_leader_flag = leader_chengzi_normal
+    }
+}

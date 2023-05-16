@@ -1,0 +1,25 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_chengzi"
+		textureFile = "gfx/event_pictures/chengzi.dds"
+	}	
+    spriteType = {
+		name = "GFX_jxtd"
+		textureFile = "gfx/models/portraits/太刀.dds"
+	}	
+	spriteType = {
+		name = "GFX_wuzhuang"
+		textureFile = "gfx/event_pictures/狡猾武装.dds"
+	}
+	spriteType = {
+		name = "GFX_ouxiang"
+		textureFile = "gfx/event_pictures/偶像舞台.dds"
+	}
+	spriteType = {
+		name = "GFX_tianji"
+		textureFile = "gfx/event_pictures/天机进行时.dds"
+	}				
+}	
+	
+	
+	

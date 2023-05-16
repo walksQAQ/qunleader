@@ -1,0 +1,246 @@
+namespace = leader_class_clear
+
+event = {
+    id = leader_class_clear.1
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    immediate = {
+        every_country = { 
+            random_owned_leader = {
+                kill_leader = {
+                    type = chengzi
+                    show_notification = no
+                }
+            }
+        }
+    }
+}
+#country_event = {
+#	id = lc.1
+#	title = lc
+#	desc = lc.desc
+#	diplomatic = yes
+#	is_triggered_only = yes
+#	picture_event_data = {
+#		room = shroud_room
+#		portrait = beta
+#		city_level = root
+#		graphical_culture = root
+#	}
+#
+#	option = {
+#		name = 领袖强化
+#		country_event = {id = lc.2 }
+#	}
+#	option = {
+#		name = 领袖事件
+#		country_event = { id = lc.4 }
+#	}
+#	option = {
+#		name = 躯体重塑（复活领袖）
+#	hidden_effect = {
+#		country_event = { id = l_leader.3 }
+#		country_event = { id = l_leader.33 }
+#		country_event = { id = l_leader.333 }
+#	}
+#	}
+#	option = {
+#		name = lc.1.a
+#	}
+#}
+#
+#country_event = {
+#	id = lc.2
+#	title = lc
+#	desc = lc2.desc
+#	diplomatic = yes
+#	is_triggered_only = yes
+#	picture_event_data = {
+#		room = shroud_room
+#		portrait = beta
+#		city_level = root
+#		graphical_culture = root
+#	}
+#
+#	option = {
+#		name = jingxie
+#		country_event = { id = lc.21 }
+#	}
+#	option = {
+#		name = chengzi
+#		country_event = { id = lc.22 }
+#	}
+#	option = {
+#		name = walk
+#		country_event = { id = lc.23 }
+#	}
+#	option = {
+#		name = lc.1.a
+#	}
+#}
+#
+#country_event = {
+#	id = lc.21
+#	title = lc
+#	desc = lc21.desc
+#	diplomatic = yes
+#	is_triggered_only = yes
+#	picture_event_data = {
+#		room = shroud_room
+#		portrait = beta
+#		city_level = root
+#		graphical_culture = root
+#	}
+#
+#	option = {
+#		name = 物理学强化
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = { id = leader_qianghua.1 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = 历史发现者
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = { id = leader_qianghua.11 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = 星海探索者
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = { id = leader_qianghua.111 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = lc.1.a
+#	}
+#}
+#
+#country_event = {
+#	id = lc.22
+#	title = lc
+#	desc = lc22.desc
+#	diplomatic = yes
+#	is_triggered_only = yes
+#	picture_event_data = {
+#		room = shroud_room
+#		portrait = beta
+#		city_level = root
+#		graphical_culture = root
+#	}
+#
+#	option = {
+#		name = 社会学强化
+#		allow = {
+#
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = { id = leader_qianghua.2 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = 历史发现者
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		add_resource = { energy = -3000 }
+#		country_event = { id = leader_qianghua.22 }
+#	}
+#	option = {
+#		name = 星海探索者
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#
+#		add_resource = { energy = -3000 }
+#		country_event = { id = leader_qianghua.222 }
+#	}
+#	option = {
+#		name = lc.1.a
+#	}
+#}
+#
+#country_event = {
+#	id = lc.23
+#	title = lc
+#	desc = lc23.desc
+#	diplomatic = yes
+#	is_triggered_only = yes
+#	picture_event_data = {
+#		room = shroud_room
+#		portrait = beta
+#		city_level = root
+#		graphical_culture = root
+#	}
+#
+#	option = {
+#		name = 工程学强化
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = { id = leader_qianghua.3 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = 历史发现者
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = {id = leader_qianghua.33 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = 星海探索者
+#		allow = {
+#			resource_stockpile_compare = { resource = energy value >= 3000 }
+#		}
+#		country_event = { id = leader_qianghua.333 }
+#		add_resource = { energy = -3000 }
+#	}
+#	option = {
+#		name = lc.1.a
+#	}
+#}
+#
+#
+##领袖事件
+#country_event = {
+#	id = lc.4
+#	title = lc
+#	desc = lc.desc
+#	diplomatic = yes
+#	is_triggered_only = yes
+#	picture_event_data = {
+#		room = shroud_room
+#		portrait = beta
+#		city_level = root
+#		graphical_culture = root
+#	}
+#
+#	option = {
+#		name = 食用大橙子
+#		country_event = {id = s_leader.1 }
+#	}
+#	option = {
+#		name = 偶像大橙子
+#		country_event = { id = s_leader.4 }
+#	}
+#	option = {
+#		name = 进行天机工程
+#		country_event = { id = s_leader.2 }
+#	}
+#	option = {
+#		name = 把晶蟹做成遗珍
+#		country_event = { id = s_leader.5 }
+#	}
+#	option = {
+#		name = lc.1.a
+#	}
+#}
+#

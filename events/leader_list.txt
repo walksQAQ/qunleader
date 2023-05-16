@@ -1,0 +1,118 @@
+namespace = leader_list
+
+country_event = {
+    id = leader_list.1
+    title = leader_list.1.title
+    desc = leader_list.1.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+
+    picture_event_data = {
+        room = shroud_room
+        portrait = beta
+        city_level = root
+        graphical_culture = root
+    }
+
+    trigger = {
+        NOR = {
+            has_country_flag = leader_list_enabled
+        }
+    }
+
+    #召唤领袖
+    option = {
+        name = leader_list.1.a
+        country_event = {
+            id = leader_list.2
+        }
+    }
+    #领袖特殊功能菜单
+    option = {
+        name = leader_list.1.b
+        country_event = {
+            id = leader_list.3
+        }
+    }
+    #立绘重置
+    option = {
+        name = leader_list_portrait_reset
+        hidden_effect = {
+            event_target:leader_chengzi_@this = {
+                change_leader_portrait = chengzi
+            }
+        }
+    }
+}
+
+country_event = {
+    id = leader_list.2
+    title = leader_list.2.title
+    desc = leader_list.2.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+
+    picture_event_data = {
+        room = shroud_room
+        portrait = beta
+        city_level = root
+        graphical_culture = root
+    }
+
+    #召唤大橙子
+    option = {
+        name = leader_list.2.a
+        country_event = {
+            id = leader_chengzi.1
+        }
+    }
+}
+
+country_event = {
+    id = leader_list.3
+    title = leader_list.3.title
+    desc = leader_list.3.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+
+    picture_event_data = {
+        room = shroud_room
+        portrait = beta
+        city_level = root
+        graphical_culture = root
+    }
+
+    #食用橙子
+    option = {
+        name = leader_list.3.a
+        trigger = {
+            event_target:leader_chengzi_@root = {
+                NOR = {
+                    has_leader_flag = have_been_ate
+                    has_leader_flag = adol_mode_chengzi
+                }
+            }
+        }
+        country_event = {
+            id = leader_chengzi.2
+        }
+    }
+
+    #偶像形态大橙子·启动
+    option = {
+        name = leader_list.3.b
+        trigger = {
+            event_target:leader_chengzi_@root = {
+                NOR = {
+                    has_leader_flag = have_been_ate
+                }
+            }
+        }
+        country_event = {
+            id = leader_chengzi.4
+        }
+    }
+}

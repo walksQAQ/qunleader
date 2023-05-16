@@ -1,0 +1,36 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+
+
+portraits = {
+
+	
+	狡猾 = {	texturefile = "gfx/models/portraits/狡猾.dds"  }
+}
+
+portraits = {
+
+	
+	beta = {	texturefile = "gfx/models/portraits/beta.dds"  }
+}
+
+portraits = {
+
+	
+	chengzi = {	texturefile = "gfx/models/portraits/橙子.dds"  }
+}
+
+portraits = {
+
+	
+	chengzi_idol = {	texturefile = "gfx/models/portraits/偶像.dds"  }
+}
+

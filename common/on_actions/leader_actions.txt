@@ -1,0 +1,19 @@
+on_entering_battle = {
+	events = {
+		#leader_battle.1
+	}
+}
+
+on_game_start_country = {
+	events = {
+		#l_leader.1
+		#l_leader.2
+		#leader_qianghua.4
+	}
+}
+
+on_gamestart = {
+	events = {
+		leader_class_clear.1
+	}
+}

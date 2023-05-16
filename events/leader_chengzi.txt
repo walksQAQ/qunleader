@@ -1,0 +1,128 @@
+namespace = leader_chengzi
+
+country_event = {
+    id = leader_chengzi.1
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        any_owned_leader = {
+            NOR = {
+                is_chengzi = yes
+            }
+        }
+    }
+    immediate = {
+        create_leader = {
+            name = leader_chengzi
+            class = governor
+            species = owner_main_species
+            gender = female
+            set_age = 17
+            skill = 1
+            immortal = yes
+            event_leader = yes
+            sub_type = survey
+            skip_background_generation = yes
+            can_see_in_list = yes
+            custom_catch_phrase = leader_chengzi_catch_phrase
+            custom_description = leader_chengzi_desc
+            randomize_traits = no
+            traits = {
+                trait = leader_trait_chengzi
+                trait = leader_trait_chengzi_council
+            }
+            effect = {
+                set_owner = root
+                set_leader_flag = leader_chengzi_normal
+                save_global_event_target_as = leader_chengzi_@owner
+                add_skill_without_trait_selection = 29
+                change_leader_portrait = chengzi
+            }
+        }
+    }
+}
+
+country_event = {
+    id = leader_chengzi.2
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        event_target:leader_chengzi_@root = {
+            remove_trait = leader_trait_chengzi
+            add_timed_trait = {
+                trait = leader_trait_chengzi_ate
+                days = 360
+            }
+            set_timed_leader_flag = {
+                flag = have_been_ate
+                days = 369
+            }
+            leader_event = {
+                id = leader_chengzi.3
+                days = 361
+            }
+        }
+    }
+}
+
+leader_event = {
+    id = leader_chengzi.3
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        add_trait = leader_trait_chengzi
+    }
+}
+
+#大橙子模式切换
+country_event = {
+    id = leader_chengzi.4
+    title = leader_chengzi.4.title
+    desc = leader_chengzi.4.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+
+    picture_event_data = {
+        room = shroud_room
+        portrait = chengzi
+        city_level = root
+        graphical_culture = root
+    }
+
+    #取消领袖模式
+    option = {
+        name = leader_chengzi.4.a
+        allow = {
+            event_target:leader_chengzi_@root = {
+                has_leader_flag = adol_mode_chengzi
+            }
+        }
+        event_target:leader_chengzi_@root = {
+            remove_leader_flag = adol_mode_chengzi
+            change_leader_portrait = chengzi
+            add_trait = leader_trait_chengzi
+            remove_trait = leader_trait_chengzi_adol
+        }
+    }
+
+    #激活领袖模式
+    option = {
+        name = leader_chengzi.4.b
+        allow = {
+            event_target:leader_chengzi_@root = {
+                NOR = {
+                    has_leader_flag = adol_mode_chengzi
+                }
+            }
+        }
+        event_target:leader_chengzi_@root = {
+            set_leader_flag = adol_mode_chengzi
+            change_leader_portrait = chengzi_idol
+            remove_trait = leader_trait_chengzi
+            add_trait = leader_trait_chengzi_adol
+        }
+
+    }
+}

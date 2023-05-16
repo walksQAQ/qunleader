@@ -1,0 +1,350 @@
+namespace = s_leader
+#橙子供应食物
+#country_event = {
+#	id = s_leader.1
+#	title = chengzi
+#	desc = chengzi.desc
+#	picture = GFX_chengzi
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#
+#				has_leader_flag = f_chengzi
+#			}
+#	}
+#
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_leader_flag = f_chengzi
+#			}
+#			remove_trait = leader_trait_chengzi
+#			add_trait = leader_trait_food
+#		}
+#
+#	}
+#	option = {
+#		name = s.1.a
+#		add_resource = {
+#			food = 10180
+#		}
+#		country_event = {
+#			id = s_leader.11 days = 180
+#		}
+#	}
+#}
+##狡猾工程学
+#country_event = {
+#	id = s_leader.2
+#	title = tianji
+#	desc = tianji.desc
+#	picture = GFX_tianji
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#
+#				has_leader_flag = f_walk
+#			}
+#	}
+#
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_leader_flag = f_walk
+#			}
+#			add_trait = leader_trait_tianji
+#		}
+#
+#	}
+#	option = {
+#		name = s.2.a
+#		add_modifier = {
+#			modifier = tianji_modifier days = 1800
+#		}
+#		hidden_effect = {
+#			country_event = {
+#				id = s_leader.3 days = 1800
+#			}
+#		}
+#	}
+#}
+#
+##移除效果特质
+#country_event = {
+#	id = s_leader.3
+#	hide_window = yes
+#	is_triggered_only = yes
+#    trigger = {
+#		any_owned_leader = {
+#
+#				has_leader_flag = f_walk
+#			}
+#	}
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_leader_flag = f_walk
+#			}
+#			remove_trait = leader_trait_tianji
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = s_leader.11
+#	hide_window = yes
+#	is_triggered_only = yes
+#    trigger = {
+#		any_owned_leader = {
+#
+#				has_leader_flag = f_chengzi
+#			}
+#	}
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_leader_flag = f_chengzi
+#			}
+#			remove_trait = leader_trait_food
+#			add_trait = leader_trait_chengzi
+#		}
+#	}
+#}
+#
+##为了拯救，偶像！
+#country_event = {
+#	id = s_leader.4
+#	title = ouxiang
+#	desc = ouxiang.desc
+#	is_triggered_only = yes
+#	picture = GFX_ouxiang
+#
+#	trigger = {
+#		any_owned_leader = {
+#		NOT = {
+#			has_trait = leader_trait_food
+#		}
+#	}
+#}
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_leader_flag = f_chengzi
+#			}
+#			change_leader_portrait = 偶像
+#		}
+#	}
+#	option = {
+#		name = s.4.a
+#		add_modifier = {
+#			modifier = ouxiang_modifier days = 3650
+#		}
+#	}
+#}
+##遗珍晶蟹太刀
+#country_event = {
+#	id = s_leader.5
+#	title = taidao
+#	desc = taidao.desc
+#	is_triggered_only = yes
+#	picture = GFX_evt_cybernetics
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = leader_lgyxdjxtd
+#		}
+#	}
+#
+#	immediate = {
+#			every_owned_leader = {
+#				limit = { has_leader_flag = leader_lgyxdjxtd }
+#				kill_leader = {
+#					type = scientist
+#				}
+#		}
+#		add_relic = r_jxtd
+#	}
+#}
+##复活晶蟹移除遗珍
+#country_event = {
+#	id = s_leader.55
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		NOT = {
+#			any_owned_leader = {
+#				has_leader_flag = leader_lgyxdjxtd
+#			}
+#		}
+#	}
+#
+#	immediate = {
+#		remove_relic = r_jxtd
+#		create_leader = {
+#			class = scientist
+#			species = owner_main_species
+#			gender = female
+#			name = NAME_jxtd
+#			skill = 10
+#			traits = {
+#				add_trait = leader_trait_lgyxdjxtd
+#				add_trait = leader_trait_uf_advocate
+#				add_trait = leader_trait_scientist_psionic
+#				add_trait = leader_trait_scientist_chosen
+#			}
+#			effect = {
+#				set_leader_flag = leader_lgyxdjxtd
+#			}
+#		}
+#		last_created_leader = {
+#			set_age = 17
+#			change_leader_portrait = lgyxdjxtd
+#			set_is_female = yes
+#		}
+#	}
+#}
+#
+##正常复活
+#country_event = {
+#	id = s_leader.555
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		NOT = {
+#			any_owned_leader = {
+#				has_leader_flag = leader_lgyxdjxtd
+#			}
+#		}
+#	}
+#
+#	immediate = {
+#		create_leader = {
+#			class = scientist
+#			species = owner_main_species
+#			gender = female
+#			name = NAME_jxtd
+#			skill = 10
+#			traits = {
+#				add_trait = leader_trait_lgyxdjxtd
+#				add_trait = leader_trait_uf_advocate
+#				add_trait = leader_trait_scientist_psionic
+#				add_trait = leader_trait_scientist_chosen
+#			}
+#			effect = {
+#				set_leader_flag = leader_lgyxdjxtd
+#			}
+#		}
+#		last_created_leader = {
+#			set_age = 17
+#			change_leader_portrait = lgyxdjxtd
+#			set_is_female = yes
+#		}
+#	}
+#}
+##内卷
+#country_event = {
+#	id = s_leader.6
+#	hide_window = yes
+#	mean_time_to_happen = {
+#		years = 25
+#	}
+#
+#
+#
+#	immediate = {
+#		random_owned_leader = {
+#			limit = {
+#				OR = {
+#						has_leader_flag = leader_lgyxdjxtd
+#						has_leader_flag = f_walk
+#						has_leader_flag = f_chengzi
+#					}
+#				}
+#					add_trait = leader_trait_keyan
+#		}
+#		country_event = {
+#			id = s_leader.66  days = 1800
+#		}
+#    }
+#}
+#
+##开摆
+#country_event = {
+#	id = s_leader.66
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_trait = leader_trait_keyan
+#		}
+#	}
+#
+#	immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_trait = leader_trait_keyan
+#			}
+#			remove_trait = leader_trait_keyan
+#			add_trait = leader_trait_fish
+#		}
+#		country_event = {
+#			id = s_leader.666 days = 1800
+#		}
+#	}
+#}
+#
+##停止摆烂
+#country_event = {
+#	id = s_leader.666
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_trait = leader_trait_fish
+#		}
+#	}
+#
+#    immediate = {
+#		every_owned_leader = {
+#			limit = {
+#				has_trait = leader_trait_fish
+#			}
+#			remove_trait = leader_trait_fish
+#		}
+#	}
+#}
+#
+##狡猾武装
+#country_event = {
+#	id = s_leader.7
+#	title = wuzhuang
+#	desc = wuzhuang.desc
+#	picture = GFX_wuzhuang
+#	mean_time_to_happen = {
+#		years = 25
+#	}
+#
+#	trigger = {
+#		any_owned_leader = {
+#			has_leader_flag = f_walk
+#		}
+#	}
+#
+#	immediate = {
+#		random_owned_fleet = {
+#			limit = {
+#				NOT = {
+#					has_fleet_flag = f_wuzhuang
+#				}
+#				is_civilian = no
+#			}
+#			set_fleet_flag = f_wuzhuang
+#		}
+#	}
+#}

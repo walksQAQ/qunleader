@@ -1,0 +1,13 @@
+leader_chengzi = {
+    parent = leaders
+    generate_add_modifiers = {
+        produces
+        cost
+        upkeep
+    }
+    generate_mult_modifiers = {
+        produces
+        cost
+        upkeep
+    }
+}

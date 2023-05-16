@@ -1,0 +1,29 @@
+
+QL_caidan = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		AND = {
+			is_ai = no
+			NOR = { has_country_flag = leader_list_enabled }
+		}
+	}
+    effect = {
+		country_event = { id = leader_list.1 }
+		set_timed_country_flag = {
+			flag = leader_list_enabled
+			days = 1
+		}
+	}
+	modifier = {
+		
+	}
+
+	ai_weight = {
+		weight = -1
+	}
+}

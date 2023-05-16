@@ -1,0 +1,12 @@
+#councilor_leader_chengzi = {
+#    is_leader_possible = {
+#        is_chengzi = yes
+#    }
+#    leader_class = {
+#        governor
+#        chengzi
+#    }
+#    modifier = {
+#
+#    }
+#}

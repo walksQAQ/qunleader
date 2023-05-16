@@ -1,0 +1,45 @@
+namespace = leader_battle
+
+#country_event = {
+#	id = leader_battle.1
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		any_owned_fleet = {
+#			has_fleet_flag = f_wuzhuang
+#		}
+#	}
+#
+#    immediate = {
+#		fromfrom = {
+#			random_list = {
+#				20 = {
+#                  add_modifier = {
+#					  modifier = lb1_modifier days = 30
+#				  }
+#				}
+#                20 = {
+#					add_modifier = {
+#						modifier = lb2_modifier days = 30
+#					}
+#				  }
+#				  20 = {
+#					add_modifier = {
+#						modifier = lb3_modifier days = 30
+#					}
+#				  }
+#				  20 = {
+#					add_modifier = {
+#						modifier = lb4_modifier days = 30
+#					}
+#				  }
+#				  20 = {
+#					add_modifier = {
+#						modifier = lb5_modifier days = 30
+#					}
+#				  }
+#			}
+#		}
+#	}
+#}

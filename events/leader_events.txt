@@ -1,0 +1,127 @@
+namespace = l_leader  
+	
+#country_event = {
+#	id = l_leader.1
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		is_ai = no
+#	}
+#
+#	immediate = {
+#		create_leader = {
+#			class = scientist
+#			species = owner_main_species
+#			gender = female
+#			name = NAME_walk
+#			traits = {
+#				trait = leader_trait_jiaohua
+#			}
+#		}
+#		last_created_leader = {
+#			set_age = 17
+#			change_leader_portrait = 狡猾
+#			set_is_female = yes
+#			set_leader_flag = f_walk
+#		}
+#	}
+#}
+
+#country_event = {
+#	id = l_leader.2
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		is_ai = no
+#	}
+#
+#	immediate = {
+#		create_leader = {
+#			class = scientist
+#			skill = 1
+#			species = owner_main_species
+#			gender = female
+#			name = NAME_chengzi
+#			traits = {
+#				trait = leader_trait_chengzi
+#				trait = leader_trait_chengzi_council
+#			}
+#			skip_background_generation = yes
+#			event_leader = yes
+#			immortal = yes
+#			randomize_traits = no
+#		}
+#		last_created_leader = {
+#			set_age = 17
+#			change_leader_portrait = 橙子
+#			set_leader_flag = f_chengzi
+#			save_global_event_target_as = chengzi
+#			add_skill_without_trait_selection = 30
+#			set_leader_flag = immu
+#		}
+#	}
+#}
+
+#country_event = {
+#	id = l_leader.3
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#
+#
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				any_owned_leader = { has_leader_flag = f_walk } }
+#
+#		}
+#		else_if = {
+#			country_event = { id = l_leader.1 }
+#		}
+#   }
+#}
+#
+#
+#country_event = {
+#	id = l_leader.33
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#
+#
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				any_owned_leader = { has_leader_flag = f_chengzi} }
+#
+#		}
+#		else_if = {
+#			country_event = { id = l_leader.2 }
+#		}
+#  }
+#}
+#
+#
+#country_event = {
+#	id = l_leader.333
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#
+#
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				any_owned_leader = { has_leader_flag = leader_lgyxdjxtd } }
+#
+#		}
+#		else_if = {
+#			country_event = { id = s_leader.555 }
+#		}
+#  }
+#}

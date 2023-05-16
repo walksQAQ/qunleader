@@ -1,0 +1,55 @@
+test_modifier = {
+	starbase_building_build_speed_mult = 100
+	
+}
+
+tianji_modifier = {
+	country_base_engineering_research_produces_add = 3000
+}
+
+ouxiang_modifier = {
+	country_base_unity_produces_add = 1000
+	country_unity_produces_mult = 0.15
+	country_base_influence_produces_add = 10
+}
+
+jxtd_modidier = {
+	ship_accuracy_add = 10
+	ship_hull_damage_mult = 1
+	ship_armor_damage_mult = 1
+	ship_shield_damage_mult = 1
+}
+
+lb1_modifier = {
+	ship_hull_add = 1000000
+	ship_shield_add = 1000000
+	ship_armor_add = 1000000
+}
+
+lb2_modifier = {
+	ship_armor_penetration_mult = -10
+	ship_shield_penetration_mult = -10
+	ship_hull_damage_mult = -0.5
+	ship_armor_damage_mult = -0.5
+	ship_shield_damage_mult = -0.5
+	ship_armor_add = 10000000
+	ship_shield_add = 10000000
+}
+
+lb3_modifier = {
+	ship_hull_add = 10000
+}
+
+lb4_modifier = {
+	ship_hull_regen_add_perc = 0.5
+	ship_hull_add = 1000000
+	ship_shield_add = 1000000
+	ship_armor_add = 1000000
+}
+
+lb5_modifier = {
+	ship_accuracy_add = 1000
+	ship_accuracy_mult = 5
+	weapon_type_energy_speed_mult = 1
+	weapon_type_energy_weapon_damage_mult = 2
+}
