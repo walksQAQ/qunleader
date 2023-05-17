@@ -91,7 +91,7 @@ country_event = {
         graphical_culture = root
     }
 
-    #取消领袖模式
+    #取消偶像模式
     option = {
         name = leader_chengzi.4.a
         allow = {
@@ -107,7 +107,7 @@ country_event = {
         }
     }
 
-    #激活领袖模式
+    #激活偶像模式
     option = {
         name = leader_chengzi.4.b
         allow = {
