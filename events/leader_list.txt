@@ -64,6 +64,11 @@ country_event = {
     #召唤大橙子
     option = {
         name = leader_list.2.a
+        trigger = {
+            any_owned_leader = {
+                is_chengzi = no
+            }
+        }
         country_event = {
             id = leader_chengzi.1
         }
