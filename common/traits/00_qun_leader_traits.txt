@@ -82,7 +82,7 @@ leader_trait_chengzi_ate = {
 	self_modifier = {
 		species_leader_exp_gain = -10
 		leaders_upkeep_mult = -1
-		leader_governors_food_produces_add = -20
+		leader_governors_unity_produces_add = -20
 	}
 	planet_modifier = {
 		pop_environment_tolerance = 50
