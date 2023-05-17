@@ -4,14 +4,7 @@ country_event = {
     id = leader_chengzi.1
     is_triggered_only = yes
     hide_window = yes
-
-    trigger = {
-        any_owned_leader = {
-            NOR = {
-                is_chengzi = yes
-            }
-        }
-    }
+    
     immediate = {
         create_leader = {
             name = leader_chengzi
