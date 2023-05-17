@@ -55,8 +55,10 @@ country_event = {
                 id = leader_chengzi.3
                 days = 361
             }
-            add_resource = {
-                food = 10000
+            owner = {
+                add_resource = {
+                    food = 10000
+                }
             }
         }
     }
