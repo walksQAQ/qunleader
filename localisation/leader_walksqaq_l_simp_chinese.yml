@@ -3,5 +3,6 @@ l_simp_chinese:
 #walksQAQ
 
 #其他事件
-event_extra_walksqaq.title:0"噩梦”
-event_extra_walksqaq.desc:0”walksQAQ刚刚传来消息称自己做了个噩梦，在报告中提到这个噩梦有关一些设备被骇入的情况，我们尚且不知道这会对未来带来什么影响。”
+leader_walksqaq_extra.1.title:0"噩梦”
+leader_walksqaq_extra.1.desc:0”walksQAQ刚刚传来消息称自己做了个噩梦，在报告中提到这个噩梦有关一些设备被骇入的情况，我们尚且不知道这会对未来带来什么影响。”
+leader_walksqaq_extra.1.a:0"留心"
