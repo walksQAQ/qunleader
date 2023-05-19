@@ -1,0 +1,17 @@
+namespace = leader_walksqaq_extra
+
+country_event = {
+    id = leader_walksqaq_extra.1
+    title = leader_walksqaq_extra.1.title
+    desc = leader_walksqaq_extra.1.desc
+    
+    is_triggered_only = yes
+    fire_only_once = yes
+    
+    option = {
+        name = leader_walksqaq_extra.1.a
+        hidden_effect = {
+        
+        }
+    }
+}
