@@ -1,0 +1,20 @@
+namespace = ai_fleet_control
+
+#测试中
+#半自动舰队作战系统
+#依靠queue_action对舰队进行控制，尝试将舰队移动交给ai执行，玩家只需要选择目标
+
+#生成特殊国家
+country_event = {
+    id = ai_fleet_countrol.1
+    hide_window = yes
+    is_triggered_only = yes
+    
+    trigger = {
+        always = no
+    }
+  
+  immediate = {
+      create
+  }
+}
