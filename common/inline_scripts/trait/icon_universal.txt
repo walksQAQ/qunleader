@@ -15,7 +15,7 @@ icon = {
 
     # 除去背景外的图标，需要在interface里注册
     layer = {
-        icon = "gfx/interface/icons/traits/leader_traits/橙子t.dds"
+        icon = $ICON$
     }
 
     # 议会图标，不用改
