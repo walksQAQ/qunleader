@@ -13,7 +13,7 @@
 portraits = {
 
 	
-	狡猾 = {	texturefile = "gfx/models/portraits/狡猾.dds"  }
+	jiaohua = {	texturefile = "gfx/models/portraits/狡猾.dds"  }
 }
 
 portraits = {

@@ -75,6 +75,21 @@ country_event = {
             id = leader_chengzi.1
         }
     }
+
+    #召唤walksQAQ
+    option = {
+        name = leader_list.2.b
+        allow = {
+            NOR = {
+                any_owned_leader = {
+                    is_walksqaq = yes
+                }
+            }
+        }
+        country_event = {
+            id = leader_walksqaq.1
+        }
+    }
 }
 
 country_event = {
@@ -123,6 +138,23 @@ country_event = {
         hidden_effect = {
             country_event = {
                 id = leader_chengzi.4
+            }
+        }
+    }
+
+    option = {
+        name = leader_list.3.c
+        trigger = {
+            event_target:leader_walksqaq_@root = {
+                NOR = {
+                    has_leader_flag = is_modding
+                    has_leader_flag = relax_after_modding
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = leader_walksqaq.2
             }
         }
     }

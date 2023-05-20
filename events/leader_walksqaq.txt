@@ -1,0 +1,136 @@
+namespace = leader_walksqaq
+
+country_event = {
+    id = leader_walksqaq.1
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        create_leader = {
+            name = leader_walksqaq
+            class = walksQAQ
+            species = owner_main_species
+            gender = female
+            set_age = 16
+            skill = 1
+            immortal = yes
+            event_leader = yes
+            skip_background_generation = yes
+            can_see_in_list = yes
+            custom_catch_phrase = leader_walksqaq_catch_phrase
+            custom_description = leader_walksqaq_desc
+            randomize_traits = no
+            traits = {
+                trait = leader_trait_jiaohua
+                trait = leader_trait_jiaohua_council
+            }
+            effect = {
+                set_owner = root
+                set_leader_flag = leader_walksqaq_normal
+                save_global_event_target_as = leader_walksqaq_@owner
+                add_skill_without_trait_selection = 29
+                change_leader_portrait = jiaohua
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = leader_walksqaq_extra.1
+                days = 3600
+                random = 72000
+            }
+        }
+    }
+}
+
+country_event = {
+    id = leader_walksqaq.2
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        event_target:leader_walksqaq_@root = {
+            set_timed_leader_flag = {
+                flag = is_modding
+                days = 721
+            }
+            add_timed_trait = {
+                trait = leader_trait_tianji
+                days = 720
+            }
+            owner = {
+                add_resource = {
+                    energy = -1000
+                    alloys = -1000
+                    food = -500
+                }
+                country_event = {
+                    id = leader_walksqaq.3
+                    days = 720
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = leader_walksqaq.3
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            event_target:leader_walksqaq_@root = {
+                set_leader_flag = relax_after_modding
+                leader_event = {
+                    id = leader_walksqaq.4
+                    days = 1800
+                    random = 720
+                }
+            }
+        }
+        create_message = {
+            type = leader_walksqaq_message_type
+            localization = leader_walksqaq_message_desc
+            days = 30
+            target = this
+            variable = {
+                type = name
+                localization = SCIENTIST
+                scope = this
+            }
+        }
+        add_resource = {
+            engineering_research = 99999
+            society_research = 99999
+            physics_research = 99999
+        }
+        add_random_research_option = {
+            category = psionics
+            area = society
+            tier = 5
+            add_progress = 0.99
+            fail_effects = {
+                add_resource = {
+                    engineering_research = -9999
+                    society_research = -9999
+                    physics_research = -9999
+                }
+            }
+            ignore_prereqs = no
+            ignore_rare = no
+        }
+    }
+}
+
+leader_event = {
+    id = leader_walksqaq.4
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        remove_leader_flag = relax_after_modding
+    }
+}

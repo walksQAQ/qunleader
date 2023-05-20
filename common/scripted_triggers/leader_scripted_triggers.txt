@@ -3,3 +3,22 @@ is_chengzi = {
         has_leader_flag = leader_chengzi_normal
     }
 }
+
+is_walksqaq = {
+    OR = {
+        has_leader_flag = leader_walksqaq_normal
+    }
+}
+
+is_special_leader_class_without_flag = {
+    NOR = {
+        AND = {
+            leader_class = chengzi
+            has_leader_flag = leader_chengzi_normal
+        }
+        AND = {
+            leader_class = walksQAQ
+            has_leader_flag = leader_walksQAQ_normal
+        }
+    }
+}

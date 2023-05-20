@@ -4,7 +4,8 @@ leader_trait_chengzi = {
 
 	inline_script = {
 		CLASS = chengzi
-		script = trait/icon_chengzi
+		ICON = "gfx/interface/icons/traits/leader_traits/橙子t.dds"
+		script = trait/icon_universal
 		RARITY = paragon
 		COUNCIL = no
 		TIER = 3
@@ -33,7 +34,8 @@ leader_trait_chengzi_adol = {
 
 	inline_script = {
 		CLASS = chengzi
-		script = trait/icon_chengzi
+		ICON = "gfx/interface/icons/traits/leader_traits/橙子t.dds"
+		script = trait/icon_universal
 		RARITY = paragon
 		COUNCIL = no
 		TIER = 3
@@ -71,7 +73,8 @@ leader_trait_chengzi_ate = {
 
 	inline_script = {
 		CLASS = chengzi
-		script = trait/icon_chengzi
+		ICON = "gfx/interface/icons/traits/leader_traits/橙子t.dds"
+		script = trait/icon_universal
 		RARITY = paragon
 		COUNCIL = no
 		TIER = 3
@@ -101,8 +104,9 @@ leader_trait_chengzi_council = {
 
 	inline_script = {
 		CLASS = chengzi
-		script = trait/icon_chengzi
-		RARITY = common
+		ICON = "gfx/interface/icons/traits/leader_traits/橙子t.dds"
+		script = trait/icon_universal
+		RARITY = paragon
 		COUNCIL = yes
 		TIER = 3
 	}
@@ -127,23 +131,31 @@ leader_trait_chengzi_council = {
 
 leader_trait_jiaohua = {
 	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/狡猾t.dds"
+
+	inline_script = {
+		CLASS = walksQAQ
+		ICON = "gfx/interface/icons/traits/leader_traits/狡猾t.dds"
+		script = trait/icon_universal
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 3
+	}
+
 	randomized = no
-                immortal_leaders = yes
-	modifier = {    
-		country_engineering_research_produces_add = 1000
-		all_technology_research_speed = 1
-	}	
+	immortal_leaders = yes
+
+	modifier = {
+		science_ship_survey_speed = 10
+		ship_anomaly_research_speed_mult = 50
+		ship_anomaly_generation_chance_mult = 50
+		ship_anomaly_fail_risk = -9999
+	}
 	self_modifier = {
 		species_leader_exp_gain = 10
-                                leaders_upkeep_mult = -1
+		leaders_upkeep_mult = -1
 	}
-	
-	
 
-	leader_class = { admiral scientist general governor }
-	leader_trait = all
+	leader_class = all
 	
 	ai_categories = {
 		engineering
@@ -157,32 +169,38 @@ leader_trait_jiaohua = {
 	}
 }
 
-leader_trait_food = {
+leader_trait_jiaohua_council = {
 	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/橙子t2.dds"
-	randomized = no
-                immortal_leaders = no
-	modifier = {    
-		country_food_produces_add = 1018
-	}	
-	self_modifier = {
-		species_leader_exp_gain = -1
-                                leaders_upkeep_mult = 1.5
-	}
-	
-	
+	councilor_trait = yes
 
-	leader_class = { admiral scientist general governor }
-	leader_trait = all
-	
+	inline_script = {
+		CLASS = walksQAQ
+		ICON = "gfx/interface/icons/traits/leader_traits/狡猾t.dds"
+		script = trait/icon_universal
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 3
+	}
+
+	randomized = no
+	immortal_leaders = yes
+
+	triggered_modifier = {
+		all_technology_research_speed = 100
+		country_engineering_research_produces_mult = 10
+		country_society_research_produces_mult = 10
+		country_physics_research_produces_mult = 10
+	}
+
+	leader_class = all
+
 	ai_categories = {
 		engineering
 		physics
 		society
 		survey
 	}
-	
+
 	ai_weight = {
 		weight = 0
 	}
@@ -190,19 +208,30 @@ leader_trait_food = {
 
 leader_trait_tianji = {
 	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/天机.dds"
-	randomized = no
-                immortal_leaders = no
-	modifier = {    
-		country_engineering_research_produces_add = 3000
-		all_technology_research_speed = -10
-	}	
-	
-	
+	councilor_trait = yes
 
-	leader_class = { admiral scientist general governor }
-	leader_trait = all
+	inline_script = {
+		CLASS = walksQAQ
+		ICON = "gfx/interface/icons/traits/leader_traits/天机.dds"
+		script = trait/icon_universal
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 3
+	}
+
+	randomized = no
+	immortal_leaders = no
+	triggered_modifier = {
+		country_engineering_research_produces_mult = 10000
+		country_society_research_produces_mult = 10000
+		country_physics_research_produces_mult = 10000
+		all_technology_research_speed = -10
+		ship_anomaly_generation_chance_mult = 100
+		ship_anomaly_research_speed_mult = 100
+		ship_anomaly_fail_risk = -9999
+	}
+
+	leader_class = all
 	
 	ai_categories = {
 		engineering

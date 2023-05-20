@@ -1,8 +1,25 @@
-l_simp_chinese:
+﻿l_simp_chinese:
 
 #walksQAQ
+ walksQAQ:0"§RwalksQAQ§!"
+ walksQAQ_plural:0""
+ walksQAQ_description:0""
+ paragon_walksqaq_trait:0"§R命定特质·walksQAQ§!"
+ leader_walksqaq:0"walksQAQ"
+ leader_trait_jiaohua:0"§RwalksQAQ§!"
+ leader_trait_jiaohua_desc:0"这名领袖是一名狡猾人，一个使用不可思议的狡猾力量对模组进行逆向科技的人"
+ leader_trait_jiaohua_council:0"$leader_trait_jiaohua$"
+ leader_trait_jiaohua_council_desc:0"$leader_trait_jiaohua_desc$"
+ leader_trait_tianji:0"§R天机中§!"
+ leader_trait_tianji_desc:0"这位领袖正在试图逆向破解狡猾的奥秘，这让她缺乏对流于表面的科技池子的兴趣。"
+ leader_walksqaq_catch_phrase:0""
+ leader_walksqaq_desc:0""
 
-#其他事件
-leader_walksqaq_extra.1.title:0"噩梦”
-leader_walksqaq_extra.1.desc:0”walksQAQ刚刚传来消息称自己做了个噩梦，在报告中提到这个噩梦有关一些设备被骇入的情况，我们尚且不知道这会对未来带来什么影响。”
-leader_walksqaq_extra.1.a:0"留心"
+ #天机系统
+ leader_walksqaq.3.title:0"来自walksQAQ的通讯"
+ leader_walksqaq_message_desc:0"walksQAQ刚刚完成了一次天机工程，新的科技已经增加到了我们的科技库中"
+
+ #其他事件
+ leader_walksqaq_extra.1.title:0"噩梦"
+ leader_walksqaq_extra.1.desc:0"walksQAQ刚刚传来消息称自己做了个噩梦，在报告中提到这个噩梦有关一些设备被骇入的情况，我们尚且不知道这会对未来带来什么影响。"
+ leader_walksqaq_extra.1.a:0"了解"

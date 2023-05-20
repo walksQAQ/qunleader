@@ -1,7 +1,5 @@
 ﻿l_simp_chinese:
 
-leader_trait_jiaohua:0"§RwalksQAQ§!"、
-leader_trait_jiaohua_desc:0"这名领袖是一名狡猾人，一个使用不可思议的狡猾力量对模组进行逆向科技的人"
 leader_trait_food:0"§H食用中§!"
 leader_trait_food_desc:0"为了拯救饥肠辘辘的大家，决定站出来成为偶（shi）像（wu）"
 chengzi_:0"§H美味橙子§!"
@@ -11,8 +9,6 @@ tianji_modifier:0"天机中"
 s.2.a:0"加大力度！"
 tianji:0"§R天机工程§!"
 tianji.desc:0"在我们的优秀科学家walksQAQ的带领下，对其他模组的天机工程正在展开中。\n通过对各种各样狡猾代码的研究，我们的模组工程学必将蒸蒸日上！"
-leader_trait_tianji:0"§R天机中§!"
-leader_trait_tianji_desc:0"这位领袖正在试图逆向破解狡猾的奥秘，这让她缺乏对流于表面的科技池子的兴趣。"
 ouxiang:0"成为偶像"
 ouxiang.desc:0"因为科研能力不够高只能被迫出道养活自己的大橙子\n\n终有一天会在全宇宙歌唱"
 s.4.a:0"好耶！"

@@ -1,18 +1,17 @@
 namespace = leader_class_clear
 
-event = {
+leader_event = {
     id = leader_class_clear.1
     hide_window = yes
     is_triggered_only = yes
-    fire_only_once = yes
+
+    trigger = {
+        is_special_leader_class_without_flag = yes
+    }
+
     immediate = {
-        every_country = { 
-            random_owned_leader = {
-                kill_leader = {
-                    type = chengzi
-                    show_notification = no
-                }
-            }
+        kill_leader = {
+            show_notification = no
         }
     }
 }

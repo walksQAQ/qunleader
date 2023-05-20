@@ -1,7 +1,9 @@
 ﻿l_simp_chinese:
 
  ##橙子##
- chengzi:0"橙子"
+ chengzi:0"§H橙子§!"
+ chengzi_plural:0""
+ chengzi_description:0""
  leader_trait_chengzi:0"§H橙子§!"
  leader_trait_chengzi_desc:0"这位领袖是一种美味的食物"
  leader_trait_chengzi_ate:0"§H被吃掉的橙子§!"
@@ -10,12 +12,10 @@
  leader_trait_chengzi_council_desc:0"这位领袖是一种美味的食物"
  leader_trait_chengzi_adol:0"§H橙子§!"
  leader_trait_chengzi_adol_desc:0"正在当偶像的橙子"
- chengzi_plural:0"橙子"
- chengzi_description:0"美味的大橙子"
  leader_chengzi:0"橙子"
  leader_chengzi_class:0"橙子"
  leader_chengzi_catch_phrase:0"橙子"
- leader_chengzi_desc:0"§H橙子§!在月球上被我们发现，当时她正在月球上…………嗦泡面？"
+ leader_chengzi_desc:0"$leader_trait_chengzi$在月球上被我们发现，当时她正在月球上…………嗦泡面？"
  paragon_chengzi_trait:0"§H命定特质·大橙子§!"
  councilor_leader_chengzi:0""
 

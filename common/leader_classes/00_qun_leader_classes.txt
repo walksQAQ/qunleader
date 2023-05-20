@@ -1,17 +1,37 @@
-#chengzi = {
-#    name = chengzi
-#    name_plural = chengzi_plural
-#    description = chengzi_description
-#    can_govern_planet = yes
-#    can_have_traits = yes
-#    max_trait_points = 1
-#    resources = {
-#        category = leader_chengzi
-#        upkeep = {
-#            unity = 2
-#        }
-#        inline_script = "paragon/leader_base_upkeep"
-#    }
-#
-#    default_category = governor
-#}
+chengzi = {
+    name = chengzi
+    name_plural = chengzi_plural
+    description = chengzi_description
+    can_govern_planet = yes
+    can_have_traits = yes
+
+    max_trait_points = 1
+    resources = {
+        category = leader_chengzi
+        upkeep = {
+            unity = 2
+        }
+        inline_script = "paragon/leader_base_upkeep"
+    }
+
+    default_category = governor
+}
+
+walksQAQ = {
+    name = walksQAQ
+    name_plural = walksQAQ_plural
+    description = walksQAQ_description
+    can_govern_planet = yes
+    can_have_traits = yes
+
+    max_trait_points = 1
+    resources = {
+        category = leader_walksQAQ
+        upkeep = {
+            unity = 2
+        }
+        inline_script = "paragon/leader_base_upkeep"
+    }
+
+    default_category = scientist
+}
