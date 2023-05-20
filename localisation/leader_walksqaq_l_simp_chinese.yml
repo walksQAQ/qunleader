@@ -4,7 +4,7 @@
  walksQAQ:0"§RwalksQAQ§!"
  walksQAQ_plural:0""
  walksQAQ_description:0""
- paragon_walksqaq_trait:0"§R命定特质·walksQAQ§!"
+ paragon_walksQAQ_trait:0"§R命定特质·walksQAQ§!"
  leader_walksqaq:0"walksQAQ"
  leader_trait_jiaohua:0"§RwalksQAQ§!"
  leader_trait_jiaohua_desc:0"这名领袖是一名狡猾人，一个使用不可思议的狡猾力量对模组进行逆向科技的人"
@@ -16,7 +16,7 @@
  leader_walksqaq_desc:0""
 
  #天机系统
- leader_walksqaq.3.title:0"来自walksQAQ的通讯"
+ MESSAGE_leader_walksqaq_message_desc_TITLE:0"来自walksQAQ的通讯"
  leader_walksqaq_message_desc:0"walksQAQ刚刚完成了一次天机工程，新的科技已经增加到了我们的科技库中"
 
  #其他事件
