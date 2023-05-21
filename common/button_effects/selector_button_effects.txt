@@ -1,0 +1,38 @@
+selector_confirm_button_effect = {
+    allow = {
+
+    }
+    potential = {
+        exists = fleet
+        this = {
+            NOR = {
+                owner = {
+                    is_country_type = fleet_control_country
+                }
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+            set_owner = event_target:fleet_control_country
+        }
+    }
+}
+selector_cancel_button_effect = {
+    allow = {
+
+    }
+    potential = {
+        exists = fleet
+        this = {
+            owner = {
+                is_country_type = fleet_control_country
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+            set_owner = from
+        }
+    }
+}

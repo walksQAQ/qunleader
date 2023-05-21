@@ -15,6 +15,20 @@ leader_event = {
         }
     }
 }
+
+country_event = {
+    id = leader_class_clear.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            leader_event = {
+                id = leader_class_clear.1
+            }
+        }
+    }
+}
 #country_event = {
 #	id = lc.1
 #	title = lc

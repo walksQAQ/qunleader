@@ -6,15 +6,51 @@ namespace = ai_fleet_control
 
 #生成特殊国家
 country_event = {
-    id = ai_fleet_countrol.1
+    id = ai_fleet_control.1
     hide_window = yes
     is_triggered_only = yes
+    fire_only_once = yes
     
     trigger = {
         always = no
     }
   
   immediate = {
-      create
+      create_country = {
+          name = NAME_leader_ai_fleet_1
+          type = fleet_control_country
+          flag = random
+          effect = {
+              save_global_event_target_as = fleet_control_country
+              add_modifier = {
+                  modifier = fleet_ai_increase
+              }
+          }
+      }
+      establish_communications_no_message = event_target:fleet_control_country
   }
+}
+
+#修改舰队所有权
+country_event = {
+    id = ai_fleet_control.2
+    title = ai_fleet_control.2.title
+    desc = ai_fleet_control.2.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+    custom_gui = control_fleet_selector
+
+    trigger = {
+        from = {
+            is_country_type = fleet_control_country
+        }
+    }
+
+    immediate = {
+        save_global_event_target_as = fleet_old_owner
+    }
+    after = {
+        clear_global_event_target = fleet_old_owner
+    }
 }

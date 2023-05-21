@@ -1,0 +1,16 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_selector_confirm_button
+        textureFile = "gfx/interface/custom_selector_gui/独立ui选中按钮_确认.dds"
+    }
+    spriteType = {
+        name = GFX_selector_cancel_button
+        textureFile = "gfx/interface/custom_selector_gui/独立ui选中按钮_取消.dds"
+    }
+    corneredTileSpriteType = {
+        name = GFX_selector_background
+        textureFile = "gfx/interface/custom_selector_gui/独立ui背景.png"
+        borderSize = { x = 1920 y = 1080 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+    }
+}

@@ -142,6 +142,7 @@ country_event = {
         }
     }
 
+    #启动天机工程
     option = {
         name = leader_list.3.c
         trigger = {
@@ -155,6 +156,38 @@ country_event = {
         hidden_effect = {
             country_event = {
                 id = leader_walksqaq.2
+            }
+        }
+    }
+
+    #启动舰队代理功能
+    option = {
+        name = leader_list.3.d
+        trigger = {
+            event_target:fleet_control_country = {
+                NOR = {
+                    has_country_flag = ai_fleet_control_on
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:fleet_control_country = {
+                set_country_flag = ai_fleet_control_on
+            }
+        }
+    }
+
+    #关闭舰队代理功能
+    option = {
+        name = leader_list.3.e
+        trigger = {
+            event_target:fleet_control_country = {
+                has_country_flag = ai_fleet_control_on
+            }
+        }
+        hidden_effect = {
+            event_target:fleet_control_country = {
+                remove_country_flag = ai_fleet_control_on
             }
         }
     }
