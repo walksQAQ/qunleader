@@ -303,23 +303,19 @@ leader_trait_fish = {
 
 leader_trait_wulixue = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/物理学.dds"
 	randomized = no
-                immortal_leaders = no
 	modifier = {    
-		category_computing_research_speed_mult = 1
-		category_particles_research_speed_mult = 1
-		category_field_manipulation_research_speed_mult = 1
+		category_computing_research_speed_mult = 2
+		category_particles_research_speed_mult = 2
+		category_field_manipulation_research_speed_mult = 2
 	}	
 	self_modifier = {
 		species_leader_exp_gain = 1
 		leaders_upkeep_mult = -1
 	}
-	
 
-	leader_class = { admiral scientist general governor }
-	leader_trait = all
+	leader_class = all
 	
 	ai_categories = {
 		engineering
@@ -335,10 +331,8 @@ leader_trait_wulixue = {
 
 leader_trait_shehuixue = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/社会学.dds"
 	randomized = no
-                immortal_leaders = no
 	modifier = {    
 		category_biology_research_speed_mult = 2
 		category_military_theory_research_speed_mult = 2
@@ -347,10 +341,8 @@ leader_trait_shehuixue = {
 	self_modifier = {
 		species_leader_exp_gain = 1
 	}
-	
 
-	leader_class = { admiral scientist general governor }
-	leader_trait = all
+	leader_class = all
 	
 	ai_categories = {
 		engineering
@@ -366,22 +358,18 @@ leader_trait_shehuixue = {
 
 leader_trait_gongchengxue = {
 	cost = 1
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/工程学.dds"
 	randomized = no
-                immortal_leaders = no
 	modifier = {    
-		category_voidcraft_research_speed_mult = 1.5
-		category_industry_research_speed_mult = 1.5
-		category_materials_research_speed_mult = 1.5
+		category_voidcraft_research_speed_mult = 2
+		category_industry_research_speed_mult = 2
+		category_materials_research_speed_mult = 2
 	}	
 	self_modifier = {
 		species_leader_exp_gain = 1
 	}
-	
 
-	leader_class = { admiral scientist general governor }
-	leader_trait = all
+	leader_class = all
 	
 	ai_categories = {
 		engineering
@@ -455,3 +443,20 @@ leader_trait_tansuoadd = {
 	}
 }
 
+katana_relic_added = {
+	cost = 0
+	initial = no
+	randomized = no
+	self_modifier = {
+		leader_cost_empire_size_mult = 1
+	}
+	inline_script = {
+		script = trait/icon_katana
+		CLASS = scientist
+		ICON = "GFX_leader_trait_katana"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_class = all
+}

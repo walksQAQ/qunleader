@@ -160,13 +160,33 @@ country_event = {
         }
     }
 
+    #刀刀升变/强化系统
+    option = {
+        name = leader_list.3.katana_special
+        trigger = {
+            AND = {
+                has_country_flag = xr_leader_get
+                any_owned_leader = {
+                    has_trait = leader_trait_lgyxdjxtd
+                    has_trait = leader_trait_information
+                }
+            }
+        }
+        country_event = {
+            id = leader_katana_extra.1
+        }
+    }
+
     #启动舰队代理功能
     option = {
-        name = leader_list.3.d
+        name = leader_list.3.fleeton
         trigger = {
-            event_target:fleet_control_country = {
-                NOR = {
-                    has_country_flag = ai_fleet_control_on
+            OR = {
+                always = no
+                event_target:fleet_control_country = {
+                    NOR = {
+                        has_country_flag = ai_fleet_control_on
+                    }
                 }
             }
         }
@@ -179,10 +199,13 @@ country_event = {
 
     #关闭舰队代理功能
     option = {
-        name = leader_list.3.e
+        name = leader_list.3.fleetoff
         trigger = {
-            event_target:fleet_control_country = {
-                has_country_flag = ai_fleet_control_on
+            OR = {
+                always = no
+                event_target:fleet_control_country = {
+                    has_country_flag = ai_fleet_control_on
+                }
             }
         }
         hidden_effect = {

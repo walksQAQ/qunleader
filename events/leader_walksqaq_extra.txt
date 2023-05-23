@@ -11,7 +11,12 @@ country_event = {
     option = {
         name = leader_walksqaq_extra.1.a
         hidden_effect = {
-        
+            event_target:leader_walksqaq_@root = {
+                add_timed_trait = {
+                    trait = leader_trait_arrested_development
+                    days = 30
+                }
+            }
         }
     }
 }

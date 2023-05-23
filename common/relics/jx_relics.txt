@@ -9,10 +9,10 @@ r_jxtd = {
 		category = relics
 		# Activation cost
 		cost = {
-			
+			food = 15
 		}
 		produces = {
-			
+			alloys = 50
 		}
 	}
 
@@ -24,7 +24,7 @@ r_jxtd = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_produces_mult = 0.15
+		planet_jobs_produces_mult = 150
 	}
 
 	score = 10086
@@ -40,9 +40,9 @@ r_jxtd = {
 			add_modifier = {
 				modifier = jxtd_modidier days = 500
 			}
-			country_event = {
-				id = s_leader.55
-			}
+			#country_event = {
+			#	id = s_leader.55
+			#}
 		}
 	}
 

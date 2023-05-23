@@ -13,11 +13,11 @@ is_walksqaq = {
 is_special_leader_class_without_flag = {
     NOR = {
         AND = {
-            leader_class = chengzi
+            #leader_class = chengzi
             has_leader_flag = leader_chengzi_normal
         }
         AND = {
-            leader_class = walksQAQ
+            #leader_class = walksQAQ
             has_leader_flag = leader_walksQAQ_normal
         }
     }

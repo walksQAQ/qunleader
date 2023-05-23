@@ -1,0 +1,178 @@
+namespace = leader_katana_extra
+
+#刀刀的强化菜单
+country_event = {
+    id = leader_katana_extra.1
+    title = leader_katana_extra.1.title
+    desc = leader_katana_extra.1.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+
+    picture_event_data = {
+        room = shroud_room
+        portrait = katana
+        city_level = root
+        graphical_culture = root
+    }
+
+    #刀の遗珍
+    option = {
+        name = leader_katana_extra.1.a
+        trigger = {
+            NOR = {
+                has_relic = r_jxtd
+            }
+        }
+        country_event = {
+            id = leader_katana_extra.10
+        }
+    }
+
+    #添加强化天赋
+    #工程学
+    option = {
+        name = leader_katana_extra.1.b
+        custom_tooltip = leader_katana_extra.1.b.tooltip
+        trigger = {
+            event_target:leader_katana_@root = {
+                NOR = {
+                    has_leader_flag = has_add_engineering_trait
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:leader_katana_@root = {
+                add_trait_no_notify = leader_trait_gongchengxue
+                set_leader_flag = has_add_engineering_trait
+            }
+        }
+    }
+
+    #社会学
+    option = {
+        name = leader_katana_extra.1.c
+        custom_tooltip = leader_katana_extra.1.c.tooltip
+        trigger = {
+            event_target:leader_katana_@root = {
+                NOR = {
+                    has_leader_flag = has_add_society_trait
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:leader_katana_@root = {
+                add_trait_no_notify = leader_trait_shehuixue
+                set_leader_flag = has_add_society_trait
+            }
+        }
+    }
+
+    #物理学
+    option = {
+        name = leader_katana_extra.1.d
+        custom_tooltip = leader_katana_extra.1.d.tooltip
+        trigger = {
+            event_target:leader_katana_@root = {
+                NOR = {
+                    has_leader_flag = has_add_physics_trait
+                }
+            }
+        }
+        hidden_effect = {
+            event_target:leader_katana_@root = {
+                add_trait_no_notify = leader_trait_wulixue
+                set_leader_flag = has_add_physics_trait
+            }
+        }
+    }
+
+    #启动刀刀的升变系统
+    option = {
+        name = leader_katana_extra.1.katana_class_change
+        allow = {
+            has_relic = r_jxtd
+        }
+        hidden_effect = {
+            country_event = {
+                id = leader_katana_extra.2
+            }
+        }
+    }
+}
+
+#刀刀的升变菜单
+country_event = {
+    id = leader_katana_extra.2
+    title = leader_katana_extra.2.title
+    desc = leader_katana_extra.2.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+
+    picture_event_data = {
+        room = shroud_room
+        portrait = katana
+        city_level = root
+        graphical_culture = root
+    }
+
+    #升变·科学家
+    option = {
+        name = leader_katana_extra.2.a
+    }
+
+    #升变·舰队司令
+    option = {
+        name = leader_katana_extra.2.b
+    }
+
+    #升变·总督
+    option = {
+        name = leader_katana_extra.2.c
+    }
+}
+
+#添加刀刀的遗珍
+country_event = {
+    id = leader_katana_extra.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        add_relic = r_jxtd
+        event_target:leader_katana_@root = {
+            add_trait_no_notify = katana_relic_added
+        }
+    }
+}
+
+#开局检测
+country_event = {
+    id = leader_katana_extra.9999
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        any_owned_leader = {
+            AND = {
+                has_leader_flag = leader_katana
+                has_trait = leader_trait_lgyxdjxtd
+                has_trait = leader_trait_information
+            }
+        }
+    }
+
+    immediate = {
+        random_owned_leader = {
+            limit = {
+                AND = {
+                    has_leader_flag = leader_katana
+                    has_trait = leader_trait_lgyxdjxtd
+                    has_trait = leader_trait_information
+                }
+            }
+            save_global_event_target_as = leader_katana_@root
+        }
+    }
+}

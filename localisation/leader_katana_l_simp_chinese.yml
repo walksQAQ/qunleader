@@ -1,0 +1,27 @@
+﻿l_simp_chinese:
+
+#强化菜单
+ leader_katana_extra.1.title:0"刀刀的强化菜单"
+ leader_katana_extra.1.desc:0"在这里你可以给予刀刀一些专属强化"
+ leader_katana_extra.1.a:0"把刀刀做成遗珍！"
+ leader_katana_extra.1.b:0"对刀刀进行§H工程学强化§!"
+ leader_katana_extra.1.b.tooltip:0"§H工程学强化§!将会为三种领域的工程学研究提供200%的研究速度加成"
+ leader_katana_extra.1.c:0"对刀刀进行§G社会学强化§!"
+ leader_katana_extra.1.c.tooltip:0"§G社会学强化§!将会为三种领域的社会学研究提供200%的研究速度加成"
+ leader_katana_extra.1.d:0"对刀刀进行§B物理学强化§!"
+ leader_katana_extra.1.d.tooltip:0"§B物理学强化§!将会为三种领域的物理学研究提供200%的研究速度加成"
+
+ #升变系统
+ leader_katana_extra.1.katana_class_change:0"打开§E刀刀§!的升变菜单"
+ leader_katana_extra.2.title:0""
+ leader_katana_extra.2.desc:0""
+ leader_katana_extra.2.a:0""
+ leader_katana_extra.2.b:0""
+ leader_katana_extra.2.c:0""
+
+#刀刀·遗珍
+ katana_relic_added:0"§E被做成遗珍的晶蟹太刀§!"
+ katana_relic_added_desc:0"这是刀刀被做成遗珍之后带来的副作用"
+ r_jxtd:0"路过一下的晶蟹太刀"
+ r_jxtd_active:0"一斩断骨，二斩屠军！三斩灭世！"
+ r_jxtd_desc:0"使用摸鱼的路过晶蟹太刀制作的晶蟹太刀，被做成太刀是摸鱼的代价"
