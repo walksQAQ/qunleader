@@ -6,7 +6,7 @@ selector_confirm_button_effect = {
         exists = fleet
         this = {
             NOR = {
-                owner = {
+                controller = {
                     is_country_type = fleet_control_country
                 }
             }
@@ -14,7 +14,7 @@ selector_confirm_button_effect = {
     }
     effect = {
         hidden_effect = {
-            set_owner = event_target:fleet_control_country
+            set_controller = event_target:fleet_control_country
         }
     }
 }
@@ -25,14 +25,14 @@ selector_cancel_button_effect = {
     potential = {
         exists = fleet
         this = {
-            owner = {
+            controller = {
                 is_country_type = fleet_control_country
             }
         }
     }
     effect = {
         hidden_effect = {
-            set_owner = from
+            set_controller = from
         }
     }
 }

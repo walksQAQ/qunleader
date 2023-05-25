@@ -54,3 +54,213 @@ country_event = {
         clear_global_event_target = fleet_old_owner
     }
 }
+
+country_event = {
+    id = ai_fleet_control.3
+    title = ai_fleet_control.3.title
+    desc = ai_fleet_control.3.desc
+
+    diplomatic = yes
+    is_triggered_only = yes
+    # custom_gui = fleet_target_selector
+
+    after = {
+        event_target:fleet_control_country = {
+            every_owned_fleet = {
+                if = {
+                    limit = {
+                        owner = {
+                            is_country = fromfromfrom
+                        }
+                    }
+                }
+                fleet_event = {
+                    id = ai_fleet_control.100
+                }
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = ai_fleet_control.100
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        exists = this
+        owner = { is_country = event_target:fleet_old_owner }
+        controller = { is_country = event_target:fleet_control_country }
+    }
+    immediate = {
+        queue_actions = {
+            repeat = {
+                effect = {
+                    id = SRA_Crisis.40.e0
+                    if = {
+                        limit = { count_system = {
+                            limit = { check_variable = { which = SRA_Crisis_fleet_id value > 0 } }
+                            count = all
+                        } }
+                        every_system = {
+                            set_variable = { which = SRA_Crisis_fleet_id value = 0 }
+                            clear_variable = SRA_Crisis_fleet_id
+                        }
+                    }
+                    if = {
+                        limit = {
+                            has_fleet_flag = SRA_Crisis_cannot_find_path
+                        }
+                        random_system = {
+                            limit = {
+                                OR = {
+                                    AND = {
+                                        exists = starbase
+                                        starbase = { owner = { is_hostile = root.owner } }
+                                    }
+                                    any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+                                }
+                            }
+                            random_system_planet = { ROOT = { set_location = { target = PREV distance = 5 angle = random } } }
+                        }
+                        remove_fleet_flag = SRA_Crisis_cannot_find_path
+                    }
+                }
+                find_closest_system = {
+                    trigger = {
+                        id = SRA_Crisis.40.t1
+                        OR = {
+                            AND = {
+                                exists = starbase
+                                starbase = { owner = { is_hostile = root.owner } }
+                            }
+                            any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+                        }
+                        ROOT = { can_access_system = prev }
+                        check_variable = { which = SRA_Crisis_fleet_id value < 1 }
+                    }
+                    found_system = {
+                        effect = {
+                            id = SRA_Crisis.40.e1
+                            set_variable = { which = SRA_Crisis_fleet_id value = root.fleet_id }
+                        }
+                        move_to = this
+                        repeat = {
+                            while = {
+                                id = SRA_Crisis.40.t2
+                                any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+                            }
+                            find_closest_planet = {
+                                trigger = {
+                                    id = SRA_Crisis.40.t3
+                                    OR = { is_colony = yes is_colonizable = yes }
+                                }
+                                found_planet = {
+                                    orbit_planet = this
+                                    effect = {
+                                        id = SRA_Crisis.40.e2
+                                        ROOT = { set_fleet_flag = SRA_Crisis_bombarding_planet }
+                                        if = {
+                                            #未殖民宜居星球过1个月炸掉
+                                            limit = { is_colony = no is_colonizable = yes }
+                                            set_planet_flag = SRA_Crisis_target_planet
+                                            planet_event = { id = SRA_Crisis.47 days = 30 }
+                                        }
+                                        if = {
+                                            #已殖民宜居星球过3个月炸掉
+                                            limit = { is_colony = yes is_colonizable = yes }
+                                            set_planet_flag = SRA_Crisis_target_planet
+                                            planet_event = { id = SRA_Crisis.47 days = 90 }
+                                        }
+                                        if = {
+                                            #高难度下炸球后概率跃迁
+                                            limit = {
+                                                has_global_flag = SRA_Crisis_lunatic
+                                            }
+                                            random = {
+                                                chance = 5
+                                                ROOT = { set_fleet_flag = SRA_Crisis_cannot_find_path }
+                                            }
+                                        }
+                                    }
+                                    repeat = {
+                                        while = {
+                                            id = SRA_Crisis.40.t4
+                                            ROOT = { has_fleet_flag = SRA_Crisis_bombarding_planet }
+                                        }
+                                        effect = {
+                                            id = SRA_Crisis.40.e3
+                                            if = {
+                                                limit = { is_colony = no is_colonizable = no }
+                                                ROOT = { remove_fleet_flag = SRA_Crisis_bombarding_planet }
+                                            }
+                                        }
+                                        wait = { duration = 5 random = 10 }
+                                    }
+                                }
+                            }
+                            move_to = this							# move away from the planet
+                            wait = { duration = 5 random = 10 }
+                        }
+                        wait = { duration = 5 random = 10 }
+                    }
+                    failed = { find_closest_system = {
+                        trigger = {
+                            id = SRA_Crisis.40.t9
+                            ROOT = { can_access_system = prev }
+                            check_variable = { which = SRA_Crisis_fleet_id value < 1 }
+                        }
+                        found_system = {
+                            effect = {
+                                id = SRA_Crisis.40.t91
+                                set_variable = { which = SRA_Crisis_fleet_id value = root.fleet_id }
+                            }
+                            move_to = this
+                            repeat = {
+                                while = {
+                                    id = SRA_Crisis.40.t10
+                                    any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+                                }
+                                find_closest_planet = {
+                                    trigger = {
+                                        id = SRA_Crisis.40.t11
+                                        OR = { is_colony = yes is_colonizable = yes }
+                                    }
+                                    found_planet = {
+                                        orbit_planet = this
+                                        effect = {
+                                            id = SRA_Crisis.40.e10
+                                            ROOT = { set_fleet_flag = SRA_Crisis_bombarding_planet }
+                                            if = {
+                                                limit = { is_colony = no is_colonizable = yes }
+                                                set_planet_flag = SRA_Crisis_target_planet
+                                                planet_event = { id = SRA_Crisis.47 days = 30 }
+                                            }
+                                        }
+                                        repeat = {
+                                            while = {
+                                                id = SRA_Crisis.40.t12
+                                                ROOT = { has_fleet_flag = SRA_Crisis_bombarding_planet }
+                                            }
+                                            effect = {
+                                                id = SRA_Crisis.40.e11
+                                                if = {
+                                                    limit = { is_colony = no is_colonizable = no }
+                                                    ROOT = { remove_fleet_flag = SRA_Crisis_bombarding_planet }
+                                                }
+                                            }
+                                            wait = { duration = 5 random = 10 }
+                                        }
+                                    }
+                                }
+                                move_to = this											# move away from the planet
+                                wait = { duration = 5 random = 10 }
+                            }
+                            wait = { duration = 5 random = 10 }
+                        }
+                        failed = { effect = { id = SRA_Crisis.40.e13 ROOT = { set_fleet_flag = SRA_Crisis_cannot_find_path } } wait = 200 }
+                    } }
+                }
+            }
+        }
+    }
+}
