@@ -91,7 +91,12 @@ country_event = {
     option = {
         name = leader_katana_extra.1.katana_class_change
         allow = {
-            has_relic = r_jxtd
+            AND = {
+                has_relic = r_jxtd
+                event_target:leader_katana_@root = {
+                    is_katana = yes
+                }
+            }
         }
         hidden_effect = {
             country_event = {
@@ -120,16 +125,54 @@ country_event = {
     #升变·科学家
     option = {
         name = leader_katana_extra.2.a
+        trigger = {
+            event_target:leader_katana_@root = {
+                NOR = {
+                    leader_class = scientist
+                }
+            }
+        }
+        hidden_effect = {
+            reset_katana = { MODE = scientist }
+        }
     }
 
     #升变·舰队司令
     option = {
         name = leader_katana_extra.2.b
+        trigger = {
+            event_target:leader_katana_@root = {
+                NOR = {
+                    leader_class = admiral
+                }
+            }
+        }
+        hidden_effect = {
+            reset_katana = { MODE = admiral }
+        }
     }
 
     #升变·总督
     option = {
         name = leader_katana_extra.2.c
+        trigger = {
+            event_target:leader_katana_@root = {
+                NOR = {
+                    leader_class = governor
+                }
+            }
+        }
+        hidden_effect = {
+            reset_katana = { MODE = governor }
+        }
+    }
+
+    #升变·???
+    option = {
+        name = leader_katana_extra.2.hidden
+        trigger = {
+            always = no
+        }
     }
 }
 

@@ -1,0 +1,80 @@
+reset_katana = {
+    event_target:leader_katana_@root = {
+        remove_all_traits = yes
+        set_skill = 1
+        readd_katana_trait = yes
+        if = {
+            limit = {
+                $MODE$ = scientist
+            }
+            change_leader_class = scientist
+            remove_leader_flag = admiral_katana
+            remove_leader_flag = governor_katana
+            katana_scientist_traits_add = yes
+        }
+        else_if = {
+            limit = {
+                $MODE$ = admiral
+            }
+            change_leader_class = admiral
+            remove_leader_flag = scientist_katana
+            remove_leader_flag = governor_katana
+            katana_admiral_traits_add = yes
+        }
+        else_if = {
+            limit = {
+                $MODE$ = governor
+            }
+            change_leader_class = governor
+            remove_leader_flag = scientist_katana
+            remove_leader_flag = admiral_katana
+            katana_governor_traits_add = yes
+        }
+        else = {
+
+        }
+    }
+}
+
+readd_katana_trait = {
+    add_skill_without_trait_selection = 49
+    add_trait_no_notify = leader_trait_lgyxdjxtd
+    add_trait_no_notify = leader_trait_information
+    #add_trait_no_notify = apex_hunter
+}
+
+katana_scientist_traits_add = {
+    set_leader_flag = scientist_katana
+}
+
+katana_admiral_traits_add = {
+    set_leader_flag = admiral_katana
+}
+
+katana_governor_traits_add = {
+    set_leader_flag = governor_katana
+}
+
+clear_leader_negative_traits_control = {
+    if = {
+        limit = {
+            $Type$ = all
+        }
+        event_target:leader_katana_@root = {
+            clear_leader_negative_traits = yes
+        }
+        event_target:leader_walksqaq_@root = {
+            clear_leader_negative_traits = yes
+        }
+        event_target:leader_chengzi_@root = {
+            clear_leader_negative_traits = yes
+        }
+    }
+    else = {
+
+    }
+}
+
+clear_leader_negative_traits = {
+    remove_all_negative_traits = yes
+}

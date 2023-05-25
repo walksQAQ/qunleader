@@ -31,3 +31,9 @@ on_custom_diplomacy = {
 		ai_fleet_control.2
 	}
 }
+
+on_yearly_pulse_country = {
+	events = {
+		#leader_list.9999
+	}
+}

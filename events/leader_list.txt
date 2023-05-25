@@ -164,16 +164,29 @@ country_event = {
     option = {
         name = leader_list.3.katana_special
         trigger = {
-            AND = {
-                has_country_flag = xr_leader_get
-                any_owned_leader = {
-                    has_trait = leader_trait_lgyxdjxtd
-                    has_trait = leader_trait_information
-                }
-            }
+            is_katana = yes
         }
         country_event = {
             id = leader_katana_extra.1
+        }
+    }
+
+    #专有领袖负面特质自动清除
+    option = {
+        name = leader_list.3.negative_traits_remove
+        trigger = {
+            any_owned_leader = {
+                OR = {
+                    is_chengzi = yes
+                    is_walksqaq = yes
+                    is_katana = yes
+                }
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = leader_list.9999
+            }
         }
     }
 
@@ -212,6 +225,20 @@ country_event = {
             event_target:fleet_control_country = {
                 remove_country_flag = ai_fleet_control_on
             }
+        }
+    }
+}
+
+country_event = {
+    id = leader_list.9999
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        clear_leader_negative_traits_control = { Type = all }
+        country_event = {
+            id = leader_list.9999
+            days = 360
         }
     }
 }

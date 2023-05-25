@@ -13,11 +13,12 @@
 
  #升变系统
  leader_katana_extra.1.katana_class_change:0"打开§E刀刀§!的升变菜单"
- leader_katana_extra.2.title:0""
- leader_katana_extra.2.desc:0""
- leader_katana_extra.2.a:0""
- leader_katana_extra.2.b:0""
- leader_katana_extra.2.c:0""
+ leader_katana_extra.2.title:0"§B晶蟹太刀§!-§Y升变§!"
+ leader_katana_extra.2.desc:0"通过对刀刀身体进行深度研究,我们现在可以把刀刀改造成我们想要的样子"
+ leader_katana_extra.2.a:0"§B改造成科学家§!"
+ leader_katana_extra.2.b:0"§R改造成舰队司令§!"
+ leader_katana_extra.2.c:0"§Y改造成总督§!"
+ leader_katana_extra.2.hidden:0"§B改造成RBQ§!"
 
 #刀刀·遗珍
  katana_relic_added:0"§E被做成遗珍的晶蟹太刀§!"

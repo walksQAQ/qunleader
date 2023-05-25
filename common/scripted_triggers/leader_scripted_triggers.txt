@@ -10,6 +10,16 @@ is_walksqaq = {
     }
 }
 
+is_katana = {
+    AND = {
+        has_country_flag = xr_leader_get
+        any_owned_leader = {
+            has_trait = leader_trait_lgyxdjxtd
+            has_trait = leader_trait_information
+        }
+    }
+}
+
 is_special_leader_class_without_flag = {
     NOR = {
         AND = {
